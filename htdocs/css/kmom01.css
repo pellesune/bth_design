@@ -14,3 +14,142 @@
 .rm-navbar-max {
     display: none;
 }
+
+html {
+    background-color: #c0b283;
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    padding: 8px;
+    width: 980px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+/* .author-byline {
+    border: 1px solid #ccc;
+    margin-bottom: 46px;
+    padding: 1em;
+} */
+
+.author-byline {
+    width: 500px;
+    padding: 1px;
+    border: 1px solid #c0b283;
+    margin-bottom: 10px;
+    margin-bottom: 1px;
+    background-color: white;
+    overflow: auto;
+}
+
+.wrap-all {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.outer-wrap-header {
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+.inner-wrap.inner-wrap-header {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+.inner-wrap-header .row {
+    max-width: 100%;
+}
+
+.row {
+    display: block;
+    width: 101.04166667%;
+    margin-left: -.52083333%;
+    margin-right: -.52083333%;
+}
+
+header {
+    display: block;
+}
+
+.region-flash {
+    display: none;
+}
+
+.footer-column {
+    width: 33%;
+    float: left;
+    color: #fff;
+    background-color: #333;
+}
+
+.site-footer {
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.region-header-col-1 {
+    display: inline;
+    float: left;
+    width: 19.79166667%;
+    margin-left: .52083333%;
+    margin-right: .52083333%;
+}
+
+.site-logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: none;
+}
+
+.site-logo-text {
+    font-family: "Times New Roman",Times,serif;
+    padding-left: .2em;
+    font-size: 42px;
+    line-height: 1;
+    text-shadow: 2px -2px 2px #ccc;
+}
+
+.region-header-col-2 {
+    display: inline;
+    float: left;
+    width: 69.79166667%;
+    margin-left: .52083333%;
+    margin-right: .52083333%;
+}
+
+.rm-desktop li {
+    position: relative;
+}
+
+.rm-default li {
+    display: inline-block;
+}
+
+.rm-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rm-navbar {
+    text-align: center;
+    font-family: Cambria,Georgia,Times,'Times New Roman',serif;
+    font-size: 1.5em;
+    line-height: 0;
+}
