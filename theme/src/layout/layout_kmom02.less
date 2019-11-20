@@ -1,0 +1,52 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+/**
+* Header layout
+*/
+.outer-wrap-header {
+    background-color: #9f9;
+    overflow: auto;
+}
+
+.inner-wrap-header {
+    max-width: 100%;
+}
+
+.region-header-col-1,
+.region-header-col-3 {
+    width: 20%;
+    float: left;
+}
+
+.region-header-col-2 {
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+
+
+/**
+ * Footer layout
+ */
+.outer-wrap-footer,
+.inner-wrap-footer {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+    display: unset; // för att visa meny igen, ej kurs
+}
+
+/* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+    display: unset; // för att visa meny igen, ej kurs
+}
