@@ -1,12 +1,20 @@
 ---
 views:
-    kontakt:
+    test-sidebar-left:
+        region: sidebar-left
+        template: anax/v2/block/default
+        data:
+            meta:
+                type: single
+                route: block/test-left
+
+    test-sidebar-right:
         region: sidebar-right
         template: anax/v2/block/default
         data:
             meta:
                 type: single
-                route: block/leka-kontakt
+                route: block/test-right
 ---
 Leka runt med olika konstruktioner
 =========================

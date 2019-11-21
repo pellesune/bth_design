@@ -8,13 +8,6 @@
 /**
  * Internal self contained modules, save in directory module/.
  */
-/*!
- * Stylesheet for design kmom01.
- *
- * This stylesheet is for the design course and kmom01. Fill it with style
- * to style up the website so it is useable.
- */
-/* Hide submenu, leave this to kmom02 */
 /**
  * Style for the stylechooser.
  */
@@ -74,16 +67,66 @@ img {
 .site-logo {
   display: none;
 }
-.footer-column {
-  width: 33%;
+/**
+ * Main and sidebars layout
+ */
+.inner-wrap-main {
+  overflow: auto;
+}
+.region-main,
+.region-sidebar-left,
+.region-sidebar-right {
+  overflow: auto;
+}
+.region-main {
+  width: 70%;
+  margin-left: 10%;
+  float: left;
+  overflow: auto;
+}
+.region-main.has-sidebar {
+  margin-left: 0;
+}
+.region-main.has-sidebar-left.has-sidebar-right {
+  width: 60%;
+}
+.region-sidebar-left,
+.region-sidebar-right {
+  width: 30%;
   float: left;
 }
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+  width: 20%;
+}
+/**
+  * Footer layout
+  */
+.footer-column {
+  width: 29%;
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.footer-column a {
+  color: red;
+}
+.site-footer {
+  color: white;
+  text-align: center;
+  padding-bottom: 24px;
+  clear: both;
+  margin-top: 48px;
+  border-top: 1px solid #fff;
+}
+/**
+ * Byline layout
+ */
 .author-byline {
-  width: 500px;
+  width: 400px;
   padding: 1px;
   border: 1px solid #c0b283;
-  margin-bottom: 10px;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
   background-color: white;
   overflow: auto;
 }
@@ -92,6 +135,29 @@ img {
  */
 @media screen and (max-width: 1500px) {
   .site-logo {
+    display: none;
+  }
+}
+/**
+ * Navbar
+ */
+@media screen and (max-width: 960px) {
+  .rm-desktop a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+@media screen and (max-width: 800px) {
+  .region-header-col-1,
+  .region-header-col-3 {
+    width: 15%;
+  }
+  .region-header-col-2 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rm-desktop {
     display: none;
   }
 }

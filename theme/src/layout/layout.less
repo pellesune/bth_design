@@ -15,6 +15,7 @@
     max-width: 800px;
     margin: 0 auto;
     background-color: #ccc;
+    //overflow: auto;
 }
 
 /* Hide submenu, leave this to kmom02 */
@@ -27,27 +28,87 @@
     display: none;
 }
 
-// .wrap-all {
-//     max-width: 800px;
-//     margin: 0 auto;
-//     background-color: #ccc; //fanns inget
-// }
-
 .site-logo {
     display: none;
 }
 
-.footer-column {
-    width: 33%;
+/**
+ * Main and sidebars layout
+ */
+.inner-wrap-main {
+    //.clearfix();
+    overflow: auto;
+}
+
+.region-main,
+.region-sidebar-left,
+.region-sidebar-right {
+    overflow: auto;
+}
+
+.region-main {
+    width: 70%;
+    margin-left: 10%;
+    float: left;
+    overflow: auto;
+
+    &.has-sidebar {
+        margin-left: 0;
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        width: 60%;
+    }
+
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    width: 30%;
     float: left;
 }
 
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    width: 20%;
+}
+
+
+
+ /**
+  * Footer layout
+  */
+.footer-column {
+//    display: inline; //RJ
+    width: 29%;
+    float: left;
+    margin-left: 2%; //RJ
+    margin-right: 2%; //RJ
+}
+
+.footer-column a { //RJ
+    color: red;
+}
+
+.site-footer { //RJ
+    color: white;
+    text-align: center;
+    padding-bottom: 24px;
+    clear: both;
+    margin-top: 48px;
+    border-top: 1px solid #fff;
+}
+
+
+
+/**
+ * Byline layout
+ */
 .author-byline {
-    width: 500px;
+    width: 400px;
     padding: 1px;
     border: 1px solid #c0b283;
-    margin-bottom: 10px;
-    margin-bottom: 1px;
+    margin-bottom: 3px;
     background-color: white;
     overflow: auto;
 }

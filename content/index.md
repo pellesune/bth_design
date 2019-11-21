@@ -5,7 +5,7 @@ Om mig själv
 =========================
 
 <article>
-[FIGURE src="image/Kapten_Skagg.png?widht=200&height=200" class="right" caption="Bild på Kapten Skägg"]
+[FIGURE src="image/Kapten_Skagg.png?widht=200&height=200" class="me-img" caption="Bild på Kapten Skägg"]
 
 <p>Jag är uppvuxen i Stockholm och har varit staden trogen hela mitt liv.
 Jag livnär mig inom IT-sektorn där jag har verkat i 30 år. På min fritid

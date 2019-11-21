@@ -4,6 +4,13 @@
 * This stylesheet is for the design course and kmom02 where we use LESS.
 */
 /**
+* Import mixins.
+*/
+/**
+ * A small clearfix:
+ * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
+ */
+/**
 * Normalize and reset the style.
 */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -4737,151 +4744,6 @@ template {
  * Style
  */
 /**
- * Base style to affect HTML elements on a general scale.
- */
-/**
- * Base style to affect HTML elements on a general scale.
- */
-html {
-  overflow-y: scroll;
-  background-color: #333;
-}
-body {
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #ddd;
-  font: 100.01%/1 serif;
-}
-img {
-  max-width: 100%;
-}
-/**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
- */
-/**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
- */
-/**
- * Variables
- */
-/**
- * General layout
- */
-.inner-wrap {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ccc;
-}
-/* Hide submenu, leave this to kmom02 */
-.rm-desktop ul {
-  display: none;
-}
-/* Hide responsive/mobile menu, leave this to kmom02 */
-.rm-navbar-max {
-  display: none;
-}
-.site-logo {
-  display: none;
-}
-.footer-column {
-  width: 33%;
-  float: left;
-}
-.author-byline {
-  width: 500px;
-  padding: 1px;
-  border: 1px solid #c0b283;
-  margin-bottom: 10px;
-  margin-bottom: 1px;
-  background-color: white;
-  overflow: auto;
-}
-/**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
- */
-/**
- * Variables
- */
-/**
-* Header layout
-*/
-.outer-wrap-header {
-  background-color: #9f9;
-  overflow: auto;
-}
-.inner-wrap-header {
-  max-width: 100%;
-}
-.region-header-col-1,
-.region-header-col-3 {
-  width: 20%;
-  float: left;
-}
-.region-header-col-2 {
-  width: 60%;
-  float: left;
-  text-align: center;
-}
-/**
- * Footer layout
- */
-.outer-wrap-footer,
-.inner-wrap-footer {
-  background-color: #333;
-  color: #fff;
-}
-/* Hide submenu, leave this to kmom02 */
-.rm-desktop ul {
-  display: unset;
-}
-/* Hide responsive/mobile menu, leave this to kmom02 */
-.rm-navbar-max {
-  display: unset;
-}
-/**
- * Layout for responsive style through media queries.
- */
-@media screen and (max-width: 1500px) {
-  .site-logo {
-    display: none;
-  }
-}
-/**
- * Show off the regions used in the website, to ease styling.
- */
-.regions .outer-wrap {
-  background-color: #f4e3c9;
-  border: 1px solid #e3b774;
-}
-.regions .inner-wrap {
-  background-color: #f4e0e9;
-  border: 1px solid #d995b4;
-}
-.regions .region-header-col-1,
-.regions .region-header-col-2,
-.regions .region-header-col-3,
-.regions .region-flash,
-.regions .region-breadcrumb,
-.regions .region-flash-message,
-.regions .region-columns-above,
-.regions .region-main,
-.regions .region-after-main,
-.regions .region-columns-below,
-.regions .region-sidebar-left,
-.regions .region-sidebar-right,
-.regions .region-footer,
-.regions .region-footer-column-1,
-.regions .region-footer-column-2,
-.regions .region-footer-column-3 {
-  background-color: #b5dce1;
-  border: 1px solid #6cbac4;
-  color: #111;
-}
-/**
 * A responsive menu.
 */
 /**
@@ -5110,23 +4972,226 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   right: 0;
 }
 /**
- * Style for responsive menu
+ * Base style to affect HTML elements on a general scale.
  */
 /**
-  * Example on media queries
+ * Base style to affect HTML elements on a general scale.
+ */
+html {
+  overflow-y: scroll;
+  background-color: #333;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #eee;
+  font: 100.01%/1 serif;
+}
+img {
+  max-width: 100%;
+}
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+/**
+ * Variables
+ */
+/**
+ * General layout
+ */
+.inner-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+  display: none;
+}
+/* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+  display: none;
+}
+.site-logo {
+  display: none;
+}
+/**
+ * Main and sidebars layout
+ */
+.inner-wrap-main {
+  overflow: auto;
+}
+.region-main,
+.region-sidebar-left,
+.region-sidebar-right {
+  overflow: auto;
+}
+.region-main {
+  width: 70%;
+  margin-left: 10%;
+  float: left;
+  overflow: auto;
+}
+.region-main.has-sidebar {
+  margin-left: 0;
+}
+.region-main.has-sidebar-left.has-sidebar-right {
+  width: 60%;
+}
+.region-sidebar-left,
+.region-sidebar-right {
+  width: 30%;
+  float: left;
+}
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+  width: 20%;
+}
+/**
+  * Footer layout
   */
-@media screen and (max-width: 680px) {
-  .rm-small {
-    display: block;
+.footer-column {
+  width: 29%;
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.footer-column a {
+  color: red;
+}
+.site-footer {
+  color: white;
+  text-align: center;
+  padding-bottom: 24px;
+  clear: both;
+  margin-top: 48px;
+  border-top: 1px solid #fff;
+}
+/**
+ * Byline layout
+ */
+.author-byline {
+  width: 400px;
+  padding: 1px;
+  border: 1px solid #c0b283;
+  margin-bottom: 3px;
+  background-color: white;
+  overflow: auto;
+}
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+/**
+ * Variables
+ */
+/**
+* Header layout
+*/
+.inner-wrap-header {
+  max-width: 100%;
+}
+.region-header-col-1,
+.region-header-col-3 {
+  width: 20%;
+  float: left;
+}
+.region-header-col-2 {
+  width: 60%;
+  float: left;
+  text-align: center;
+}
+.me-img {
+  float: right;
+}
+.byline-img {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/**
+ * Footer layout
+ */
+.outer-wrap-footer,
+.inner-wrap-footer {
+  background-color: #333;
+  color: #fff;
+}
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+  display: unset;
+}
+/* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+  display: unset;
+}
+/**
+ * Layout for responsive style through media queries.
+ */
+@media screen and (max-width: 1500px) {
+  .site-logo {
+    display: none;
   }
+}
+/**
+ * Navbar
+ */
+@media screen and (max-width: 960px) {
+  .rm-desktop a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+@media screen and (max-width: 800px) {
+  .region-header-col-1,
+  .region-header-col-3 {
+    width: 15%;
+  }
+  .region-header-col-2 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
   .rm-desktop {
     display: none;
   }
 }
-@media screen and (min-width: 680px) {
-  .rm-small {
-    display: none;
-  }
+/**
+ * Show off the regions used in the website, to ease styling.
+ */
+.regions .outer-wrap {
+  background-color: #f4e3c9;
+  border: 1px solid #e3b774;
+}
+.regions .inner-wrap {
+  background-color: #f4e0e9;
+  border: 1px solid #d995b4;
+}
+.regions .region-header-col-1,
+.regions .region-header-col-2,
+.regions .region-header-col-3,
+.regions .region-flash,
+.regions .region-breadcrumb,
+.regions .region-flash-message,
+.regions .region-columns-above,
+.regions .region-main,
+.regions .region-after-main,
+.regions .region-columns-below,
+.regions .region-sidebar-left,
+.regions .region-sidebar-right,
+.regions .region-footer,
+.regions .region-footer-column-1,
+.regions .region-footer-column-2,
+.regions .region-footer-column-3 {
+  background-color: #b5dce1;
+  border: 1px solid #6cbac4;
+  color: #111;
 }
 /**
  * My own settings, not currently in their own module.
