@@ -38,6 +38,7 @@
 .inner-wrap-main {
     //.clearfix();
     overflow: auto;
+    clear: both; // RJ - Problem med Styleväljaren.
 }
 
 .region-main,
@@ -47,7 +48,7 @@
 }
 
 .region-main {
-    width: 70%;
+    width: 75%; //RJ - 70% Problem med Styleväljaren.
     margin-left: 10%;
     float: left;
     overflow: auto;
@@ -64,13 +65,17 @@
 
 .region-sidebar-left,
 .region-sidebar-right {
-    width: 30%;
+    width: 25%; // RJ - 30%
     float: left;
 }
 
 .region-sidebar-left.has-sidebar-right,
 .region-sidebar-right.has-sidebar-left {
     width: 20%;
+}
+
+.me-img { //RJ - Min bild på Hem
+    float: right;
 }
 
 
@@ -111,4 +116,10 @@
     margin-bottom: 3px;
     background-color: white;
     overflow: auto;
+}
+
+.byline-img { //RJ - Min bild på ByLine
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
 }

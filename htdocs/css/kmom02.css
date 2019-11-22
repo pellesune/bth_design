@@ -5026,6 +5026,7 @@ img {
  */
 .inner-wrap-main {
   overflow: auto;
+  clear: both;
 }
 .region-main,
 .region-sidebar-left,
@@ -5033,7 +5034,7 @@ img {
   overflow: auto;
 }
 .region-main {
-  width: 70%;
+  width: 75%;
   margin-left: 10%;
   float: left;
   overflow: auto;
@@ -5046,12 +5047,15 @@ img {
 }
 .region-sidebar-left,
 .region-sidebar-right {
-  width: 30%;
+  width: 25%;
   float: left;
 }
 .region-sidebar-left.has-sidebar-right,
 .region-sidebar-right.has-sidebar-left {
   width: 20%;
+}
+.me-img {
+  float: right;
 }
 /**
   * Footer layout
@@ -5084,6 +5088,11 @@ img {
   background-color: white;
   overflow: auto;
 }
+.byline-img {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 /**
  * Layout style for general structure of header, navbar, main, footer
  * and other regions of the page including route specific styles.
@@ -5106,14 +5115,6 @@ img {
   width: 60%;
   float: left;
   text-align: center;
-}
-.me-img {
-  float: right;
-}
-.byline-img {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 /**
  * Footer layout

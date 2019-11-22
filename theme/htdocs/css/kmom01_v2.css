@@ -72,6 +72,7 @@ img {
  */
 .inner-wrap-main {
   overflow: auto;
+  clear: both;
 }
 .region-main,
 .region-sidebar-left,
@@ -79,7 +80,7 @@ img {
   overflow: auto;
 }
 .region-main {
-  width: 70%;
+  width: 75%;
   margin-left: 10%;
   float: left;
   overflow: auto;
@@ -92,12 +93,15 @@ img {
 }
 .region-sidebar-left,
 .region-sidebar-right {
-  width: 30%;
+  width: 25%;
   float: left;
 }
 .region-sidebar-left.has-sidebar-right,
 .region-sidebar-right.has-sidebar-left {
   width: 20%;
+}
+.me-img {
+  float: right;
 }
 /**
   * Footer layout
@@ -129,6 +133,11 @@ img {
   margin-bottom: 3px;
   background-color: white;
   overflow: auto;
+}
+.byline-img {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /**
  * Layout for responsive style through media queries.
