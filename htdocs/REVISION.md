@@ -1,6 +1,11 @@
 Revision history
 =======================
 
+v3.0.1 (2019-11-28)
+------------------------
+
+* First version of kmom03 without styling and cleaning.
+
 v3.0.0 (2019-11-28)
 ------------------------
 
