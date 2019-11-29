@@ -12,40 +12,18 @@
  */
  .row {
      #desinax-vgrid.row();
-     //background-color: #0f0;
      margin-bottom: 12px;
  }
 
 .inner-wrap {
-    //max-width: 800px;
-    //margin: 0 auto;
     background-color: #ccc;
     #desinax-vgrid.grid(1100px);
-    //overflow: auto;
 }
-
-// /* Hide submenu, leave this to kmom02 */
-// .rm-desktop ul {
-//     display: none;
-// } // bort kmom03
-
-// /* Hide responsive/mobile menu, leave this to kmom02 */
-// .rm-navbar-max {
-//     display: none;
-// } // bort kmom03
 
 .site-logo {
     display: none;
 }
 
-// .inner-wrap {
-//     #desinax-vgrid.grid(1100px);
-// }
-//
-// .inner-wrap-header,
-// .inner-wrap-footer {
-//     #desinax-vgrid.grid(100%);
-// }
 
 
 /**
@@ -53,14 +31,11 @@
 */
 
 .outer-wrap-header {
-    background-color: #9f9;
-    //overflow: auto;
-    //.clearfix();
-} // var tvungen att ta bort för kmom02 men nu i kmom03
+    background-color: #ccc;
+}
 
 .inner-wrap-header {
-    //max-width: 100%;
-    #desinax-vgrid.grid(100%);
+    #desinax-vgrid.grid(99%);
 }
 
 .vgrid .inner-wrap {
@@ -68,7 +43,7 @@
     //@gridImage: "../../img/grid_12x60x20-nomargin.png";
     #desinax-vgrid.showGrid(@gridImage, 1100px);
 
-    //&.inner-wrap-footer,
+    //&.inner-wrap-footer, // bättre responsivitet
     &.inner-wrap-header {
         #desinax-vgrid.showGrid(@gridImage);
     }
@@ -77,14 +52,10 @@
 .region-header-col-1,
 .region-header-col-3 {
     #desinax-vgrid.column(5);
-    // width: 20%;
-    // float: left;
 }
 
 .region-header-col-2 {
     #desinax-vgrid.column(14);
-    // width: 60%;
-    // float: left;
     text-align: center;
 }
 
@@ -101,28 +72,12 @@
 /**
  * Main and sidebars layout
  */
-.inner-wrap-main {
-    //.clearfix();
-    // overflow: auto;
-    //clear: both; // RJ - Problem med Styleväljaren.  // bort i kmom03
-}
-
-.region-main,
-.region-sidebar-left,
-.region-sidebar-right {
-    // overflow: auto;
-}
 
 .region-main {
     #desinax-vgrid.column(@columns * 3 / 4);
     #desinax-vgrid.push(2);
-    // width: 70%; //RJ - 70% Problem med Styleväljaren. kmom02 75%
-    // margin-left: 10%;
-    // float: left;
-    // overflow: auto;
 
     &.has-sidebar {
-        // margin-left: 0;
         #desinax-vgrid.push(0);
     }
 
@@ -131,17 +86,13 @@
     }
 
     &.has-sidebar-left.has-sidebar-right {
-        // width: 60%;
         #desinax-vgrid.column(@columns - 10);
     }
-
 }
 
 .region-sidebar-left,
 .region-sidebar-right {
     #desinax-vgrid.column(@columns * 1 / 4);
-    // width: 30%; // RJ - 30% kmom02 25%
-    // float: left;
 }
 
 .region-sidebar-right {
@@ -153,9 +104,6 @@
     #desinax-vgrid.column(@columns * 1 / 4 - 1);
 }
 
-// .me-img { //RJ - Min bild på Hem
-//     float: right;
-// }
 
 
 /**
@@ -164,10 +112,9 @@
 @media screen and (max-width: 1000px) {
     .region-main {
         #desinax-vgrid.column(@columns);
-        //#desinax-vgrid.push(0);
+        #desinax-vgrid.push(0); // ?
 
         &.has-sidebar-left.has-sidebar-right {
-            // width: 60%;
             #desinax-vgrid.column(@columns);
         }
     }
@@ -185,7 +132,6 @@
             #desinax-vgrid.column(@columns);
     }
     .region-sidebar-right {
-        //display: none;
         #desinax-vgrid.column(@columns);
         #desinax-vgrid.push(0);
     }
@@ -197,11 +143,6 @@
   */
 .footer-column {
     #desinax-vgrid.column(@columns / 3);
-//    display: inline; //RJ
-    // width: 33%;
-    // float: left;
-    // margin-left: 2%; //RJ bort kmom03
-    // margin-right: 2%; //RJ bort kmom03
 }
 
 .outer-wrap-footer,
@@ -210,47 +151,41 @@
     color: #fff;
 }
 
-// .footer-column a { //RJ
-//     color: red;
-// }
-
-.site-footer { //RJ
-    #desinax-vgrid.column(@columns);
-    // color: white;
-    // text-align: center;
-    // padding-bottom: 24px;
-    // clear: both;
-    // margin-top: 48px;
-    // border-top: 1px solid #fff;
-}
 
 
 
 /**
+ * Mina egna
+ */
+
+ .footer-column a { //RJ
+     color: red;
+ }
+
+ .site-footer { //RJ
+     #desinax-vgrid.column(@columns);
+     text-align: center;
+     border-top: 1px solid #fff;
+ }
+
+.me-img { //RJ - Min bild på Hem
+    float: right;
+}
+
+/**
  * Byline layout
  */
-// .author-byline {
-//     width: 400px;
-//     padding: 1px;
-//     border: 1px solid #c0b283;
-//     margin-bottom: 3px;
-//     background-color: white;
-//     // overflow: auto; kmom03
-// }
-//
-// .byline-img { //RJ - Min bild på ByLine
-//     float: left;
-//     padding-left: 10px;
-//     padding-right: 10px;
-// }
+.author-byline {
+    width: 400px;
+    padding: 1px;
+    border: 1px solid #c0b283;
+    margin-bottom: 3px;
+    background-color: white;
 
+}
 
-// /* Hide submenu, leave this to kmom02 */
-// .rm-desktop ul {
-//     display: unset; // för att visa meny igen, ej kurs
-// }
-//
-// /* Hide responsive/mobile menu, leave this to kmom02 */
-// .rm-navbar-max {
-//     display: unset; // för att visa meny igen, ej kurs
-// }
+.byline-img { //RJ - Min bild på Byline
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}

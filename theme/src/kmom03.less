@@ -7,25 +7,25 @@
 /**
 * Import mixins.
 */
-@import "mixin/clearfix.less";
-
-.clearfix() {
-    #design-mixin.clearfix();
-}
+// @import "mixin/clearfix.less"; //Använder inte denna i kmom03
+//
+// .clearfix() {
+//     #design-mixin.clearfix();
+// }
 
 
 
 /**
 * Normalize and reset the style.
 */
-@import "normalize.css/normalize.less"; //Krav 3
+@import "normalize.css/normalize.less";
 
 
 
 /**
 * Font Awesome.
 */
-@import "@fortawesome/fontawesome-free/less/fontawesome.less"; //Krav 4
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
 @import "@fortawesome/fontawesome-free/less/solid.less";
 @import "@fortawesome/fontawesome-free/less/brands.less";
 
@@ -34,7 +34,6 @@
 /**
  * Internal self contained modules, save in directory module/.
  */
-//@import "module/kmom01.less"; //Krav 6
 @import "module/stylechooser.less";  // Just an example module
 
 
@@ -42,8 +41,8 @@
 /**
 * A responsive menu.
 */
-@import "@desinax/responsive-menu/less/responsive-menu.less"; //Krav 5
-//@import "@desinax/responsive-menu/less/media-queries.less";
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+@import "@desinax/responsive-menu/less/media-queries.less";
 
 
 /**
@@ -52,14 +51,15 @@
 @import "@desinax/typographic-grid/less/typography-font-families.less";
 @import "@desinax/typographic-grid/less/typography-defaults.less";
 
+
+
 // Show the grid
 .hgrid .inner-wrap {
     @gridImage: "../img/magic-number-@{magicNumber}.png";
     #desinax-hgrid.showGrid(@gridImage);
 }
 
-// Adapt the typographic grid to my style
-// @fontFamilyBody:    "serif"; // "sans-serif"
+
 
 /**
  * Base style to affect HTML elements on a general scale.
@@ -75,22 +75,14 @@
 @import "@desinax/vertical-grid/less/grid.less";
 @import "layout/vgrid.less";
 
-// Default grid, change to fit your requirements.
-// @columnWidth:   30;
-// @gutterWidth:   10;
-// @columns:       24;
-// @gridType:      "float"; // "flex"
-
 
 
 /**
  * Layout style for general structure of header, navbar, main, footer
  * and other regions of the page including route specific styles.
  */
-// @import "layout/layout.less";
-// @import "layout/layout_kmom02.less";
 @import "layout/responsive.less";
-@import "layout/regions.less";     // To add style for ?regions
+@import "layout/regions.less";     // To add style for regions
 
 
 
@@ -100,7 +92,8 @@
 @bgColorHtml: #333; //#333 #424242;
 @bgColorBody: #eee; //#ddd #fff;
 
-// Default font-families
+// Adapt the typographic grid to my style
+// @fontFamilyBody:    "serif-serif"; // "sans-serif" //
 @fontFamilyHeadings:    @fontFamilyGaramond;    //"serif";
 @fontFamilyBody:        @fontFamilyMyriadPro;   //"sans-serif";
 @fontFamilyCode:        @fontFamilyCourier;     //"monospace";
