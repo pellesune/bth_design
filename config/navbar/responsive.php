@@ -19,7 +19,7 @@ return [
             "text" => "Rapport",
             "url" => "Rapport",
             "title" => "Rapport.",
-        ],        
+        ],
         [
             "text" => "Redovisning",
             "url" => "redovisning",
@@ -40,6 +40,11 @@ return [
                         "text" => "Kmom03",
                         "url" => "redovisning/kmom03",
                         "title" => "Redovisning för kmom03.",
+                    ],
+                    [
+                        "text" => "Kmom04",
+                        "url" => "redovisning/kmom04",
+                        "title" => "Redovisning för kmom04.",
                     ],
                 ],
             ],
