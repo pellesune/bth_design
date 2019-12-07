@@ -1,0 +1,275 @@
+/**
+* Layout using vgrid
+*/
+
+/**
+* Variables
+*/
+
+
+/**
+* General layout
+*/
+.row {
+    #desinax-vgrid.row();
+    margin-bottom: @magicNumber;
+}
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+}
+
+.site-logo {
+    display: none;
+}
+
+.site-logo-text a {
+    color: @logoColor;
+    font-size: 2.0em;
+}
+
+.site-logo-text-icon img {
+    filter: @logoFilter;
+}
+
+.site-logo-text a {
+    text-decoration: none;
+}
+
+.wrap-all {
+    background-color: @baseBGColor;
+}
+
+.inner-wrap {
+    background-color: @innerBGColor;
+}
+
+.outer-wrap {
+    background-color: @mainBGColor;
+}
+
+
+
+/**
+* Header layout
+*/
+.inner-wrap-header
+{
+    #desinax-vgrid.grid(99%);
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    //@gridImage: "../../img/grid_12x60x20-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    //&.inner-wrap-footer, // bättre responsivitet
+    &.inner-wrap-header {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+.region-header-col-1,
+.region-header-col-3 {
+    #desinax-vgrid.column(5);
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(14);
+    text-align: center;
+}
+
+.region-breadcrumb {
+    #desinax-vgrid.column(@columns);
+}
+
+.region-flash {
+    #desinax-vgrid.column(@columns);
+}
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+
+    &.inner-wrap-flash {
+
+        .row {
+            margin-bottom: 0;
+        }
+    }
+
+    &.inner-wrap-header {
+        background-image:
+        linear-gradient(to bottom, @flashGradTop, @flashGradMiddle, @flashGradBottom),
+        url(@flashImage);
+        background-size: cover;
+        padding-bottom: @magicNumber;
+
+    }
+}
+
+.inner-wrap-header
+{
+    #desinax-vgrid.grid(99%);
+}
+
+
+/**
+* Main and sidebars layout
+*/
+.region-main {
+    #desinax-vgrid.column(@columns * 3 / 4);
+    #desinax-vgrid.push(2);
+
+    &.has-sidebar {
+        #desinax-vgrid.push(0);
+    }
+
+    &.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 3 / 4 - 1);
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns - 10);
+    }
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    #desinax-vgrid.column(@columns * 1 / 4);
+}
+
+.region-sidebar-right {
+    #desinax-vgrid.push(1);
+}
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    #desinax-vgrid.column(@columns * 1 / 4 - 1);
+}
+
+code {
+    background-color: @codeColor;
+}
+
+.rm-small li {
+    color: @menuIconColor;
+}
+
+
+/**
+ * Responsive 1, 2, 3
+ */
+@media screen and (max-width: 1000px) {
+    .region-main {
+        #desinax-vgrid.column(@columns);
+        #desinax-vgrid.push(0); // ?
+
+        &.has-sidebar-left.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+        }
+    }
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+    .region-sidebar-left.has-sidebar-right,
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .region-main.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+    }
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns);
+        #desinax-vgrid.push(0);
+    }
+}
+
+a {
+    color:@unvisited;
+}
+
+a:visited {
+    color: @visited;
+}
+
+a:hover {
+    color: @active;
+}
+
+
+
+/* Header layout II*/
+.inner-wrap.inner-wrap-header .row {
+    margin-bottom: 0;
+}
+
+.my-navbar {
+    list-style-type: none;
+}
+
+.my-navbar.rm-default li a {
+    font-family: @fontFamilyMenu;
+    color: @navbarColor;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.rm-desktop li ul {
+    background-color: @subMenuBGColor;
+}
+
+.region-flash img {
+    display: none;
+}
+
+
+
+/**
+ * Footer layout
+ */
+.outer-wrap-footer {
+    background-color: @footerBGColor;
+}
+
+.inner-wrap-footer {
+    background-color: @footerBGColor;
+}
+
+.footer-column {
+    #desinax-vgrid.column(@columns / 3);
+}
+
+.site-footer { //RJ
+    #desinax-vgrid.column(@columns);
+    text-align: center;
+    border-top: 1px solid @footerBorderColor;
+}
+
+
+
+/**
+ * Mina egna
+ */
+.me-img { //RJ - Min bild på Hem
+    float: right;
+ }
+
+/**
+ * Byline layout
+ */
+.author-byline {
+    width: 400px;
+    padding: 1px;
+    border: 1px solid @bylineBorderColor;
+    margin-bottom: 3px;
+    background-color: @bylineBGColor;
+}
+
+.byline-img { //RJ - Min bild på Byline
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}

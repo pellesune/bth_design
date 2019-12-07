@@ -1,0 +1,117 @@
+/*!
+ * Stylesheet for design kmom04.
+ *
+ * This stylesheet is for the design course and kmom04 where we use LESS.
+ */
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+@import "module/stylechooser.less";  // Just an example module
+
+
+/**
+ * Font Awesome.
+ */
+ @import "@fortawesome/fontawesome-free/less/fontawesome.less";
+ @import "@fortawesome/fontawesome-free/less/solid.less";
+ @import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+ /**
+ * Import Fonts from googleapis
+ */
+ @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); //Dark
+ //@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+ //@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans&display=swap');
+
+
+/**
+ * A responsive menu.
+ */
+ @import "@desinax/responsive-menu/less/responsive-menu.less";
+ @import "@desinax/responsive-menu/less/media-queries.less";
+
+
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import "base/base_kmom04.less";
+
+
+/**
+ * Fluid and Responsive Vertical Grid
+ */
+// Default grid, change to fit your requirements.
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid_kmom04.less";
+
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+@import "layout/responsive.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+/**
+ * My own settings, not currently in their own module.
+ */
+@bgColorHtml: transparent;
+@bgColorBody: #B3540C;
+@colorBody: #46A6B3;
+
+@navbarColor: #96F3FF;
+@logoColor: #46A6B3;
+@logoFilter: none;
+@menuIconColor: black;
+
+@flashGradTop: rgb(230, 230, 230);
+@flashGradMiddle:  rgba(143, 143, 143, 0.6);
+@flashGradBottom:  rgba(0, 0, 0, 0);
+@flashImage: "../img/orange-wallpapers.jpg"; //RJ
+
+@baseBGColor: #B3540C;
+@mainBGColor: #B3540C;
+@innerBGColor:#FFD2B0;
+@subMenuBGColor: white;
+@footerBGColor: #FFC496;
+@footerBorderColor: grey;
+@bylineBGColor: #B3540C;
+@bylineBorderColor: #909090;
+
+@codeColor: white;
+
+@unvisited: #46A6B3;
+@visited: #46A6B3;
+@hover: #46A6B3;
+@active: #46A6B3;
+
+// Magic number and base fontsize
+@magicNumber:  24px;
+@fontSizeBody: 16px;
+
+// Adapt the typographic grid to my style
+@fontFamilyHeadings: "Roboto Regular","Roboto Regular CR","Roboto Regular Fallback",Calibri,Candara,Arial,sans-serif;
+@fontFamilyBody:     "Roboto Regular","Roboto Regular CR","Roboto Regular Fallback",Calibri,Candara,Arial,sans-serif;
+@fontFamilyCode:     "monospace";
+@fontFamilyMenu: 'Oswald', sans-serif;

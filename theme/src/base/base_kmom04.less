@@ -1,0 +1,50 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+// @fontFamilyBody: "Helvetica", "Arial", sans-serif;
+
+//
+// @bgColorHtml: transparent;
+// @bgColorBody: #57e88a14;
+// @colorBody: white;
+//
+// @flashGradTop: rgba(0, 0, 0, 1);
+// @flashGradMiddle:  rgba(0, 0, 0, 0.6);
+// @flashgradBottom:  rgba(0, 0, 0, 0);
+
+// @import url('https://fonts.googleapis.com/css?family=Abel&display=swap'); //RJ
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400i&display=swap');
+//
+// @font-face {
+//   font-family: 'Mozart';
+//   src: url('../webfonts/Mozart.ttf');
+// }
+
+// * { //RJ
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+html {
+    overflow-y: scroll;
+    background-color: @bgColorHtml;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: @colorBody;
+    background-color: @bgColorBody;
+    #desinax-hgrid.font(@fontSizeBody);
+    // font: 100.01%/1 @fontFamilyBody;
+    // line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();

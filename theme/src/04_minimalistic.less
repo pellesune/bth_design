@@ -1,0 +1,117 @@
+/*!
+ * Stylesheet for design kmom04.
+ *
+ * This stylesheet is for the design course and kmom04 where we use LESS.
+ */
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+@import "module/stylechooser.less";  // Just an example module
+
+
+/**
+ * Font Awesome.
+ */
+ @import "@fortawesome/fontawesome-free/less/fontawesome.less";
+ @import "@fortawesome/fontawesome-free/less/solid.less";
+ @import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+ /**
+ * Import Fonts from googleapis
+ */
+ @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); //Dark
+ //@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap');
+ //@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+ //@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans&display=swap');
+
+
+/**
+ * A responsive menu.
+ */
+ @import "@desinax/responsive-menu/less/responsive-menu.less";
+ @import "@desinax/responsive-menu/less/media-queries.less";
+
+
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import "base/base_kmom04.less";
+
+
+/**
+ * Fluid and Responsive Vertical Grid
+ */
+// Default grid, change to fit your requirements.
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid_kmom04.less";
+
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+@import "layout/responsive.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+/**
+ * My own settings, not currently in their own module.
+ */
+@bgColorHtml: transparent;
+@bgColorBody: white;
+@colorBody: #2b2b2b;
+
+@navbarColor: white;
+@logoColor: #c7c7c7; //#a2a2a2;
+@logoFilter: grayscale(100%);
+@menuIconColor: #c7c7c7; //#a2a2a2;
+
+@flashGradTop: rgba(0, 0, 0, 1);
+@flashGradMiddle:  rgba(0, 0, 0, 0.6);
+@flashGradBottom:  rgba(0, 0, 0, 0);
+@flashImage: "../cimage/img.php?src=../img/Material-Design-Blue-Wallpaper.jpg&f=grayscale";
+
+@baseBGColor: white;
+@mainBGColor: white;
+@innerBGColor:white;
+@subMenuBGColor: #191919;
+@footerBGColor: white;
+@footerBorderColor: grey;
+@bylineBGColor: white;
+@bylineBorderColor: #909090;
+
+@codeColor: white;
+
+@unvisited: #a2a2a2;
+@visited: #a2a2a2;
+@hover: #a2a2a2;
+@active: #a2a2a2;
+
+// Magic number and base fontsize
+@magicNumber:  24px;
+@fontSizeBody: 16px;
+
+// Adapt the typographic grid to my style
+@fontFamilyHeadings: "Montserrat", sans-serif,sans-serif;
+@fontFamilyBody:     "Montserrat", sans-serif,sans-serif;
+@fontFamilyCode:     "monospace";
+@fontFamilyMenu: 'Oswald', sans-serif;
