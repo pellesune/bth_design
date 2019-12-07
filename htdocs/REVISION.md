@@ -1,6 +1,16 @@
 Revision history
 =======================
 
+v4.0.2 (2019-12-07)
+------------------------
+
+* Released with kmom04 for design-course (updated revisionfil).
+
+v4.0.1 (2019-12-07)
+------------------------
+
+* Released with kmom04 for design-course.
+
 v4.0.0 (2019-12-01)
 ------------------------
 
