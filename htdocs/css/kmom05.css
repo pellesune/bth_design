@@ -1,11 +1,8 @@
 /*!
-* Stylesheet for design kmom04.
-*
-* This stylesheet is for the design course and kmom04 where we use LESS.
-*/
-/**
-* Import mixins.
-*/
+ * Stylesheet for design kmom05.
+ *
+ * This stylesheet is for the design course and kmom05 where we use LESS.
+ */
 /**
 * Normalize and reset the style.
 */
@@ -315,8 +312,20 @@ template {
   display: none;
 }
 /**
-* Font Awesome.
-*/
+ * Internal self contained modules, save in directory module/.
+ */
+/**
+ * Style for the stylechooser.
+ */
+/**
+ * Variables
+ */
+/**
+ * Style
+ */
+/**
+ * Font Awesome.
+ */
 /*!
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4728,20 +4737,146 @@ template {
   font-family: 'Font Awesome 5 Brands';
 }
 /**
- * Internal self contained modules, save in directory module/.
+ * Import Fonts from googleapis
  */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
 /**
- * Style for the stylechooser.
- */
-/**
- * Variables
- */
-/**
- * Style
- */
-/**
-* A responsive menu.
+* Figure and figcaption for images and other media using figure/figcaption
 */
+/**
+ * Figure with ASCIINEMA
+ */
+/**
+ * Figure with Codepen
+ */
+/** --------------------------------------------------------------
+ * Figure through .figure
+ */
+figure.figure,
+figure.asciinema,
+figure.codepen,
+figure.figure-codepen {
+  display: table;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  /* Chrome shinks images in td */
+  /* Position the images */
+}
+figure.figure img {
+  max-width: 100%;
+  display: block;
+}
+figure.figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 12px;
+}
+figure.figure figcaption p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+}
+figure.figure td img {
+  max-width: none;
+}
+figure.figure.center {
+  clear: both;
+  margin: auto;
+}
+figure.figure.center figcaption {
+  text-align: center;
+}
+figure.figure.left {
+  float: left;
+  margin-right: 0.5em;
+}
+figure.figure.right {
+  float: right;
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 963px) {
+  figure.figure.left.w67,
+  figure.figure.right.w67 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w67 img,
+  figure.figure.right.w67 img {
+    width: 962.5px;
+  }
+}
+@media screen and (max-width: 733px) {
+  figure.figure.left.w50,
+  figure.figure.right.w50 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w50 img,
+  figure.figure.right.w50 img {
+    width: 733.33333333px;
+  }
+}
+@media screen and (max-width: 688px) {
+  figure.figure.left.w40,
+  figure.figure.right.w40 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w40 img,
+  figure.figure.right.w40 img {
+    width: 687.5px;
+  }
+}
+@media screen and (max-width: 550px) {
+  figure.figure.left.w33,
+  figure.figure.right.w33 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w33 img,
+  figure.figure.right.w33 img {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 367px) {
+  figure.figure.left.w25,
+  figure.figure.right.w25 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w25 img,
+  figure.figure.right.w25 img {
+    width: 366.66666667px;
+  }
+}
+figure.asciinema {
+  display: block;
+}
+figure.asciinema figcaption {
+  display: block;
+}
+figure.asciinema .asciicast {
+  margin: 0 !important;
+}
+figure.codepen,
+figure.figure-codepen {
+  width: 100%;
+}
+/**
+ * A responsive menu.
+ */
 /**
  * Style for responsive menu
  */
@@ -4987,9 +5122,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   }
 }
 /**
-* Import the typographic grid.
-*/
-/**
  * Typographic font families to choose from.
  */
 /**
@@ -5031,13 +5163,27 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /**
  * Base style to affect HTML elements on a general scale.
  */
+html {
+  overflow-y: scroll;
+  background-color: transparent;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: black;
+  font: 16px/1.5 "Open Sans", "Arial", "Helvetica", sans-serif;
+}
+img {
+  max-width: 100%;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -5161,7 +5307,7 @@ code,
 kbd,
 samp,
 .code {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "monospace";
 }
 code,
 samp {
@@ -5315,22 +5461,8 @@ hr::after {
   padding: 0 0.25em;
   background-color: #fff;
 }
-html {
-  overflow-y: scroll;
-  background-color: #333;
-}
-body {
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #eee;
-  font: 16px/1.5 MyriadPro-Regular, "Myriad Pro Regular", MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
-}
-img {
-  max-width: 100%;
-}
 /**
- * Import the vertical grid.
+ * Fluid and Responsive Vertical Grid
  */
 /**
  * Fluid and Responsive Vertical Grid
@@ -5362,20 +5494,20 @@ img {
      */
 }
 /**
- * Layout using vgrid
-  */
+* Layout using vgrid
+*/
 /**
- * Variables
- */
+* Variables
+*/
 /**
- * General layout
- */
+* General layout
+*/
 .row {
   display: block;
   width: 101.04166667%;
   margin-left: -0.52083333%;
   margin-right: -0.52083333%;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 .row::after {
   content: "";
@@ -5383,7 +5515,6 @@ img {
   clear: both;
 }
 .inner-wrap {
-  background-color: #ccc;
   margin-right: auto;
   margin-left: auto;
   max-width: 1100px;
@@ -5391,17 +5522,28 @@ img {
 .site-logo {
   display: none;
 }
+.site-logo-text a {
+  color: white;
+  font-size: 2em;
+}
+.site-logo-text-icon img {
+  filter: grayscale(100%);
+}
+.site-logo-text a {
+  text-decoration: none;
+}
+.wrap-all {
+  background-color: black;
+}
+.inner-wrap {
+  background-color: #2f2f2f;
+}
+.outer-wrap {
+  background-color: black;
+}
 /**
 * Header layout
 */
-.outer-wrap-header {
-  background-color: #ccc;
-}
-.inner-wrap-header {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 99%;
-}
 .vgrid .inner-wrap {
   background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
   background-size: 100% auto;
@@ -5450,9 +5592,30 @@ img {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
+.inner-wrap {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1100px;
+}
+.inner-wrap.inner-wrap-flash .row {
+  margin-bottom: 0;
+}
+.inner-wrap.inner-wrap-header {
+  background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../cimage/img.php?src=../img/Material-Design-Blue-Wallpaper.jpg&f=grayscale");
+  background-size: cover;
+  padding-bottom: 24px;
+}
+.inner-wrap-header {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+}
+.inner-wrap-header .row {
+  max-width: 100%;
+}
 /**
- * Main and sidebars layout
- */
+* Main and sidebars layout
+*/
 .region-main {
   display: inline;
   float: left;
@@ -5496,6 +5659,12 @@ img {
   width: 19.79166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+}
+code {
+  background-color: black;
+}
+.rm-small li {
+  color: white;
 }
 /**
  * Responsive 1, 2, 3
@@ -5547,26 +5716,49 @@ img {
     margin-left: 0.52083333%;
   }
 }
+a {
+  color: #d27f00;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+/* Header layout II*/
+.inner-wrap.inner-wrap-header .row {
+  margin-bottom: 0;
+}
+.my-navbar {
+  list-style-type: none;
+}
+.my-navbar.rm-default li a {
+  font-family: 'Oswald', sans-serif;
+  color: grey;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+.rm-desktop li ul {
+  background-color: white;
+}
+.region-flash img {
+  display: none;
+}
 /**
-  * Footer layout
-  */
+ * Footer layout
+ */
+.outer-wrap-footer {
+  background-color: #333333;
+}
+.inner-wrap-footer {
+  background-color: #333333;
+}
 .footer-column {
   display: inline;
   float: left;
   width: 32.29166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-}
-.outer-wrap-footer,
-.inner-wrap-footer {
-  background-color: #333;
-  color: #fff;
-}
-/**
- * Mina egna
- */
-.footer-column a {
-  color: red;
 }
 .site-footer {
   display: inline;
@@ -5575,8 +5767,11 @@ img {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   text-align: center;
-  border-top: 1px solid #fff;
+  border-top: 1px solid grey;
 }
+/**
+ * Mina egna
+ */
 .me-img {
   float: right;
 }
@@ -5586,9 +5781,9 @@ img {
 .author-byline {
   width: 400px;
   padding: 1px;
-  border: 1px solid #c0b283;
+  border: 1px solid #909090;
   margin-bottom: 3px;
-  background-color: white;
+  background-color: #2f2f2f;
 }
 .byline-img {
   float: left;

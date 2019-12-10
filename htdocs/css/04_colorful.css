@@ -5423,11 +5423,6 @@ hr::after {
 /**
 * Header layout
 */
-.inner-wrap-header {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 99%;
-}
 .vgrid .inner-wrap {
   background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
   background-size: 100% auto;
@@ -5492,7 +5487,10 @@ hr::after {
 .inner-wrap-header {
   margin-right: auto;
   margin-left: auto;
-  max-width: 99%;
+  max-width: 100%;
+}
+.inner-wrap-header .row {
+  max-width: 100%;
 }
 /**
 * Main and sidebars layout

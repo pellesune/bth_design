@@ -17,7 +17,12 @@ return [
             "text" => "Rapport",
             "url" => "Rapport",
             "title" => "Rapport.",
-        ],        
+        ],
+        [
+            "text" => "Rapport",
+            "url" => "Rapport",
+            "title" => "Rapport.",
+        ],
         [
             "text" => "Redovisning",
             "url" => "redovisning",
