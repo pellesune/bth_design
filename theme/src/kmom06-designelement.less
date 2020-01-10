@@ -1,0 +1,268 @@
+/*!
+ * Stylesheet for design kmom06.
+ *
+ * This stylesheet is for the design course and kmom06 where we use LESS.
+ */
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+@import "module/stylechooser.less";  // Just an example module
+
+
+/**
+ * Font Awesome.
+ */
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+ /**
+ * Import Fonts from googleapis
+ */
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); //Dark
+
+
+/**
+* Figure and figcaption for images and other media using figure/figcaption
+*/
+@import "@desinax/figure/less/asciinema.less";
+@import "@desinax/figure/less/codepen.less";
+@import "@desinax/figure/less/figure.less";
+
+// Enable style from the module and optinally add customized layout
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}
+
+
+/**
+ * A responsive menu.
+ */
+ @import "@desinax/responsive-menu/less/responsive-menu.less";
+ @import "@desinax/responsive-menu/less/media-queries.less";
+
+
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import "base/base_kmom06.less";
+
+
+/**
+ * Fluid and Responsive Vertical Grid
+ */
+// Default grid, change to fit your requirements.
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid_kmom06.less";
+
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+@import "layout/responsive.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+/**
+ * My own settings, not currently in their own module.
+ */
+@bgColorHtml: transparent;
+@bgColorBody: black;
+@colorBody: white;
+
+@navbarColor: grey; //Navbartexten
+@menuIconColor: white; //Hamburgare
+@logoColor: white; //DesignLogo
+@logoFilter: grayscale(100%);
+
+@flashGradTop: rgba(0, 0, 0, 1);
+@flashGradMiddle:  rgba(0, 0, 0, 0.6);
+@flashGradBottom:  rgba(0, 0, 0, 0);
+@flashImage: "../cimage/img.php?src=../img/Material-Design-Blue-Wallpaper.jpg&f=grayscale";
+
+@navbarColorHover: #4A90E2;
+
+@baseBGColor: black;
+@mainBGColor: black;
+@innerBGColor:#2f2f2f;
+@subMenuBGColor: white;
+@footerBGColor: black;
+@footerBGColor: #333333;
+@footerBorderColor: grey;
+@bylineBGColor: @innerBGColor;
+@bylineBorderColor: #909090;
+
+@codeColor: black;
+
+@unvisited: #d27f00;
+@visited: white;
+@active: white;
+
+// Magic number and base fontsize
+@magicNumber:  24px;
+@fontSizeBody: 16px;
+
+// Adapt the typographic grid to my style
+@fontFamilyHeadings: "Open Sans","Arial","Helvetica",sans-serif;
+@fontFamilyBody:     "Open Sans","Arial","Helvetica",sans-serif;
+@fontFamilyCode:     "monospace";
+@fontFamilyMenu:     "Oswald", sans-serif;
+
+
+// 1. kmom06 Element Kontrast Varm och kall
+@kmom06ColdColor: #4A90E2; //Blue
+@kmom06WarmColor: #d27f00; //Orange
+
+.my-navbar.rm-default a:hover { //vanliga menyn
+    color: @kmom06ColdColor;
+}
+
+.rm-max .rm-small .rm-button.rm-clicked { //X-et i Hamburgaren
+    color: @kmom06WarmColor;
+}
+
+.rm-small li:hover a:hover { //Hamburgaren, ej klickad
+    color: @kmom06ColdColor;
+}
+
+#rm-menu a:hover { //Menyn i hamburgaren
+    color: @kmom06ColdColor;
+    text-decoration: none;
+}
+
+a {
+    color:@kmom06WarmColor;
+}
+
+a:visited {
+    color: @kmom06WarmColor;
+}
+
+a:hover {
+    color: @kmom06ColdColor;
+}
+
+// 2. kmom06 Element FÄRG på byline
+.author-byline {
+    width: 400px;
+    padding: 1px;
+    border: 1px solid @bylineBorderColor;
+    margin-bottom: 3px;
+    //background-color: @bylineBGColor;
+    animation: pulsate 100s linear infinite;
+    box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes pulsate {
+    0% {
+        background-color: #0074d9;
+    }
+    10% {
+        background-color: #7fdbff;
+    }
+    20% {
+        background-color: #39cccc;
+    }
+    30% {
+        background-color: #2ecc40;
+    }
+    40% {
+        background-color: #01ff70;
+    }
+    50% {
+        background-color: #ffdc00;
+    }
+    60% {
+        background-color: #ff851b;
+    }
+    70% {
+        background-color: #ff4136;
+    }
+    80% {
+        background-color: #f012be;
+    }
+    90% {
+        background-color: #b10dc9;
+    }
+    100% {
+        background-color: #0074d9;
+    }
+}
+
+
+// 3. kmom06 Element Typografi på LOGO
+@import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
+@fontFamilyLogo:     "Tangerine", serif;
+.site-logo-text {
+    font-family: @fontFamilyLogo;
+    font-size: 2.0rem;
+}
+
+.site-logo-text a:hover{
+    color: white;
+}
+
+// 4. kmom06 Element Streck på Header med VARM färg
+h1, h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid @kmom06WarmColor;
+}
+
+// 5. kmom06 Element Form på Navbarmenyn med avrundande varma knappar
+.my-navbar > li {
+    background-color: @kmom06WarmColor;
+    height: auto;
+    border: 10px solid @kmom06WarmColor;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.my-navbar.rm-default > li:hover { //vanliga menyn
+    background-color: white;
+    height: auto;
+    border: 10px solid white;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.my-navbar.rm-default a:hover { //vanliga menyn
+    color: @kmom06ColdColor;
+    background-color: white;
+    height: auto;
+    //border: 10px solid transparent;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.my-navbar.rm-default > li a { //vanliga menyn
+    //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: black;
+}

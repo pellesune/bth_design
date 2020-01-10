@@ -8,4 +8,4 @@ för tillämpningsområdet webb. Kursen har tekniken som utgångspunkt, där oli
 tekniker introduceras och används för att underlätta webbdesign och användbarhet
 för webbplatsen med syftet att skapa en korrekt och användarvänlig webbplats.
 
-[Här kan du läsa mera om krsen design >>](https://dbwebb.se/kurser/design-v2/)
+[Här kan du läsa mera om kursen design >>](https://dbwebb.se/kurser/design-v2/)

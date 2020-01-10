@@ -22,9 +22,10 @@ return [
                 // "css/dbwebb-se.min.css",
                 // "css/kmom01.css",
                 // "css/kmom02.css",
-                //"css/kmom03.css",
-                //"css/04_minimalistic.css"
-                "css/kmom05.css"                
+                // "css/kmom03.css",
+                // "css/04_minimalistic.css"
+                // "css/kmom05.css"
+                "css/kmom06-designelement.css"
             ],
             "javascripts" => [
                 "js/responsive-menu.js",
@@ -48,7 +49,7 @@ return [
             "template" => "anax/v2/header/site_logo_text",
             "data" => [
                 "homeLink"      => "",
-                "siteLogoText"  => "design",
+                "siteLogoText"  => "Design",
                 "siteLogoTextIcon" => "image/theme/leaf_40x40.png",
                 "siteLogoTextIconAlt" => "Löv-bild",
             ],

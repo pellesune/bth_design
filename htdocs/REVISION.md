@@ -1,6 +1,11 @@
 Revision history
 =======================
 
+v6.0.1 (2020-01-10)
+------------------------
+
+* First version of kmom06 with some basic demands, before testing.
+
 v6.0.0 (2019-12-16)
 ------------------------
 

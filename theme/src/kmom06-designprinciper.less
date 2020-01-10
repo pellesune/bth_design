@@ -1,0 +1,293 @@
+/*!
+ * Stylesheet for design kmom06.
+ *
+ * This stylesheet is for the design course and kmom06 where we use LESS.
+ */
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+@import "module/stylechooser.less";  // Just an example module
+
+
+/**
+ * Font Awesome.
+ */
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+ /**
+ * Import Fonts from googleapis
+ */
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); //Dark
+ //@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap');
+ //@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+ //@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans&display=swap');
+
+
+/**
+* A responsive menu.
+*/
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+@import "@desinax/responsive-menu/less/media-queries.less";
+
+
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import "base/base_kmom06.less";
+
+
+/**
+ * Fluid and Responsive Vertical Grid
+ */
+// Default grid, change to fit your requirements.
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid_kmom06.less";
+
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+@import "layout/responsive.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+/**
+ * My own settings, not currently in their own module.
+ */
+@bgColorHtml: transparent;
+@bgColorBody: white;
+@colorBody: #2b2b2b;
+
+@navbarColor: white;
+@logoColor: #c7c7c7; //#a2a2a2;
+@logoFilter: grayscale(100%);
+@menuIconColor: #c7c7c7; //#a2a2a2;
+
+@flashGradTop: rgba(0, 0, 0, 1);
+@flashGradMiddle:  rgba(0, 0, 0, 0.6);
+@flashGradBottom:  rgba(0, 0, 0, 0);
+@flashImage: "../cimage/img.php?src=../img/Material-Design-Blue-Wallpaper.jpg&f=grayscale";
+
+@baseBGColor: white;
+@mainBGColor: white;
+@innerBGColor:white;
+@subMenuBGColor: #191919;
+@footerBGColor: white;
+@footerBorderColor: grey;
+@bylineBGColor: white;
+@bylineBorderColor: #909090;
+
+@codeColor: white;
+
+@unvisited: #a2a2a2;
+@visited: #a2a2a2;
+@hover: #a2a2a2;
+@active: #a2a2a2;
+
+// Magic number and base fontsize
+@magicNumber:  24px;
+@fontSizeBody: 16px;
+
+// Adapt the typographic grid to my style
+@fontFamilyHeadings: "Montserrat", sans-serif,sans-serif;
+@fontFamilyBody:     "Montserrat", sans-serif,sans-serif;
+@fontFamilyCode:     "monospace";
+@fontFamilyMenu: 'Oswald', sans-serif;
+
+//kmom06
+// .inner-wrap-header
+// {
+//     height: 75px; //Höjd på bilden!
+// }
+
+//Rörelse
+.my-navbar.rm-default a:hover { //vanliga menyn
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(4px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-8px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(8px, 0, 0);
+  }
+}
+
+//hamoni kmom06
+// .region-sidebar-left,
+// .region-sidebar-right {
+//     background-color: lightgrey;
+// }
+
+
+
+// .outer-wrap {
+//     //background-image: url("../img/kmom06_e2.jpg");
+//     //background-image: linear-gradient(to right, rgba(#000) 0%, rgba(#fff) 20%, rgba(#fff) 80%, rgba(#000) 100%);
+// }
+
+// .outer-wrap-main {
+//
+// }
+
+//.outer-wrap-footer {
+    //background-image: linear-gradient(to right, rgba(#000) 0%, rgba(#fff) 20%, rgba(#fff) 80%, rgba(#000) 100%);
+    //background-image: none;
+    // background-color: transparent;
+    // margin-right: auto;
+    // margin-left: auto;
+    // max-width: 1100px;
+//}
+
+.region-main {
+    border-left: solid 2px #e4e4e4;
+    border-right: solid 2px #e4e4e4;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    &.has-sidebar {
+        border-right: solid 2px #e4e4e4;
+        border-left: solid 2px #e4e4e4;
+        margin-right: 0px;
+    }
+
+    &.has-sidebar-right {
+        border-left: solid 2px #e4e4e4;
+        border-right: solid 2px #e4e4e4;
+        margin-right: 0px;
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        border-left: solid 2px #e4e4e4;
+        border-right: solid 2px #e4e4e4;
+        margin-right: 0px;
+    }
+}
+
+.region-main {
+    border-left: solid 2px #e4e4e4;
+    border-right: solid 2px #e4e4e4;
+}
+
+.next-previous .next {
+    float: right;
+    text-align: right;
+}
+
+// .inner-wrap-main {
+//     border-left: solid 2px red;
+//     border-right: solid 2px red;
+// }
+
+.inner-wrap-main  > .row {
+    margin-bottom: 0px;
+}
+
+.inner-wrap-breadcrumb > .row {
+    margin-bottom: 0px;
+}
+
+//
+// body {
+//     background-image: linear-gradient(to right, rgba(#000) 0%, rgba(#fff) 20%, rgba(#fff) 80%, rgba(#000) 100%);
+// }
+
+//.outer-wrap-footer
+.outer-wrap {
+    background-image: linear-gradient(to right, rgba(#000) 0%, rgba(#fff) 20%, rgba(#fff) 80%, rgba(#000) 100%);
+    //background-image: none;
+    //background-color: transparent;
+}
+
+// hr {
+//   height: 3px;
+//   border: 0;
+//   background-color: #fff;
+//   background-image: linear-gradient(left, #f7f6f4, #fff, #f7f6f4);
+// }
+// hr::after {
+//   content: '';
+//   display: block;
+//   height: 1px;
+//   background-color: #c3c3c3;
+//   background-image: linear-gradient(left, #f7f6f4, #c3c3c3, #f7f6f4);
+// }
+
+
+// .inner-wrap-main {
+//         padding-bottom: 100px;
+// }
+//
+// .footer-column {
+//     border-top: 6px double lightgrey;
+// }
+
+// kmom06 Element Kontrast Varm och kall
+@kmom06ColdColor: #4A90E2; //Blue
+@kmom06WarmColor: #d27f00; //Orange
+
+.my-navbar.rm-default a:hover { //vanliga menyn
+    color: @kmom06ColdColor;
+}
+
+.rm-max .rm-small .rm-button.rm-clicked { //X-et i Hamburgaren
+    color: @kmom06WarmColor;
+}
+
+.rm-small li:hover a:hover { //Hamburgaren, ej klickad
+    color: @kmom06ColdColor;
+}
+
+#rm-menu a:hover { //Menyn i hamburgaren
+    color: @kmom06ColdColor;
+    text-decoration: none;
+}
+
+a {
+    color:@kmom06WarmColor;
+}
+
+a:visited {
+    color: @kmom06WarmColor;
+}
+
+a:hover {
+    color: @kmom06ColdColor;
+}
+
+.site-logo-text a:hover{
+    color: white;
+}

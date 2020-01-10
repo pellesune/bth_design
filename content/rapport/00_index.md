@@ -3,4 +3,4 @@
 Rapporter
 =========================
 
-Detta innehåller de rapporter som gjorts i kursen.
+Detta innehåller de rapporter som gjorts i design kursen.
