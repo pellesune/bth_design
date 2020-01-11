@@ -81,7 +81,7 @@
 @colorBody: #2b2b2b;
 
 @navbarColor: white;
-@logoColor: #c7c7c7; //#a2a2a2;
+@logoColor: white; //#c7c7c7; //#a2a2a2;
 @logoFilter: grayscale(100%);
 @menuIconColor: #c7c7c7; //#a2a2a2;
 
@@ -143,6 +143,16 @@
   40%, 60% {
     transform: translate3d(8px, 0, 0);
   }
+}
+
+.row {
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.inner-wrap.inner-wrap-header {
+    padding-bottom: 0px;
 }
 
 //hamoni kmom06
@@ -227,7 +237,8 @@
 
 //.outer-wrap-footer
 .outer-wrap {
-    background-image: linear-gradient(to right, rgba(#000) 0%, rgba(#fff) 20%, rgba(#fff) 80%, rgba(#000) 100%);
+    background-image: linear-gradient(to right, rgba(#000) 0%, rgba(#fff) 14%, rgba(#fff) 86%, rgba(#000) 100%);
+    //background-image: linear-gradient(262deg, rgb(0, 45, 161), rgb(2, 108, 223) 55%, rgb(0, 45, 161));
     //background-image: none;
     //background-color: transparent;
 }
@@ -259,6 +270,20 @@
 @kmom06ColdColor: #4A90E2; //Blue
 @kmom06WarmColor: #d27f00; //Orange
 
+// 3. kmom06 Element Typografi på LOGO
+@import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
+@fontFamilyLogo:     "Tangerine", serif;
+
+.site-logo-text {
+    font-family: @fontFamilyLogo;
+    //font-size: 1,7rem;
+    font-size: 20px;
+}
+
+// .site-logo-text a:hover{
+//     color: @kmom06ColdColor;  //white;
+// }
+
 .my-navbar.rm-default a:hover { //vanliga menyn
     color: @kmom06ColdColor;
 }
@@ -289,5 +314,5 @@ a:hover {
 }
 
 .site-logo-text a:hover{
-    color: white;
+    color: @kmom06ColdColor;
 }

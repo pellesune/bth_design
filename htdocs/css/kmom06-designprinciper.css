@@ -5395,7 +5395,7 @@ hr::after {
   display: none;
 }
 .site-logo-text a {
-  color: #c7c7c7;
+  color: white;
   font-size: 2em;
 }
 .site-logo-text-icon img {
@@ -5769,6 +5769,14 @@ a:hover {
     transform: translate3d(8px, 0, 0);
   }
 }
+.row {
+  margin-bottom: 0px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+}
+.inner-wrap.inner-wrap-header {
+  padding-bottom: 0px;
+}
 .region-main {
   border-left: solid 2px #e4e4e4;
   border-right: solid 2px #e4e4e4;
@@ -5807,7 +5815,18 @@ a:hover {
   margin-bottom: 0px;
 }
 .outer-wrap {
-  background-image: linear-gradient(to right, #000000 0%, #ffffff 20%, #ffffff 80%, #000000 100%);
+  background-image: linear-gradient(to right, #000000 0%, #ffffff 14%, #ffffff 86%, #000000 100%);
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Tangerine Regular'), local('Tangerine-Regular'), url(https://fonts.gstatic.com/s/tangerine/v11/IurY6Y5j_oScZZow4VOxCZZJ.ttf) format('truetype');
+}
+.site-logo-text {
+  font-family: "Tangerine", serif;
+  font-size: 20px;
 }
 .my-navbar.rm-default a:hover {
   color: #4A90E2;
@@ -5832,5 +5851,5 @@ a:hover {
   color: #4A90E2;
 }
 .site-logo-text a:hover {
-  color: white;
+  color: #4A90E2;
 }

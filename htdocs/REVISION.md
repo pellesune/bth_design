@@ -1,6 +1,11 @@
 Revision history
 =======================
 
+v6.0.2 (2020-01-11)
+------------------------
+
+* Released with kmom06 for design-course included fixes.
+
 v6.0.1 (2020-01-10)
 ------------------------
 
@@ -9,7 +14,7 @@ v6.0.1 (2020-01-10)
 v6.0.0 (2019-12-16)
 ------------------------
 
-* Released with kmom06 for design-course.
+* Initial commit for kmom06.
 
 v5.0.2 (2019-12-10)
 ------------------------
